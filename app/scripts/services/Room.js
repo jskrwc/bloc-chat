@@ -10,11 +10,8 @@
 
 // add rooms    bloc-chat-3
     Room.add = function(room) {
-      rooms.$add({
-        name: room,
-        console.log(rooms)
-      })
-
+      rooms.$add(room);
+      console.log(room);
     }
 
     return Room;
