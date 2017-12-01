@@ -1,0 +1,21 @@
+<!-- template for create modal popup to create new room -->
+<div>
+<!-- <div ng-controller="ModalCtrl">  don't need bc referenced in controller-->
+        <div class="modal-header">
+            <h3>Create new room</h3>
+        </div>
+        <form>
+          <div class="modal-body">
+            <label>Enter a room name</label>
+            <input type="text" ng-model="modal.newRoom.name">
+
+          </div>
+          <div class="modal-footer">
+              <button class="btn btn-warning" ng-click="modal.cancel()">Cancel</button>
+              <button class="btn primary-btn" ng-click="modal.submit()">Create Room</button>
+          </div>
+        </form>
+
+
+    <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+</div>

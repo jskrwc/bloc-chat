@@ -1,6 +1,11 @@
 // Room factory   bloc-chat-2
 
 (function() {
+  /**
+    * @function Room
+    * @desc factory that defines all Room-related API queries
+    * @param {Object} $firebaseArray -- data returned as array
+    */
   function Room($firebaseArray) {
     var Room = {};
     var ref = firebase.database().ref().child("rooms");
@@ -11,7 +16,6 @@
 // add rooms    bloc-chat-3
     Room.add = function(room) {
       rooms.$add(room);
-      console.log(room);
     }
 
     return Room;

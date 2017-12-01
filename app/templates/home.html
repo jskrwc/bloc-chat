@@ -1,15 +1,15 @@
- <h1>Home Page</h1>
- <h2>Dummy</h2>
- <ul>
-   <li>creating some random html</li>
-   <li>to test the template</li>
-   <li>give depth</>
- </ul>
+<section class="sidebar">
+
+    <h1>Bloc Chat</h1>
+
+ <!-- cp 3  - need add new Room button -->
+    <button class="new-room-button" ng-click="home.newRoom()">New room</button>
 
 <!-- cp2 pt 2 -->
-<section class="sidebar">
-  <div class="rooms-container" ng-repeat="room in home.rooms">
-    {{ room.$value }}
-    {{ room }}
-  </div>
+    <div class="rooms-container" ng-repeat="room in home.rooms">
+      {{ room.$value }}
+      &nbsp &nbsp
+      {{ room }}
+    </div>
+
 </section>
