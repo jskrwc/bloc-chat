@@ -1,15 +1,34 @@
 <section class="sidebar">
 
     <h1>Bloc Chat</h1>
+    <i><small>Where conversation goes to die....</small></i>
 
  <!-- cp 3  - need add new Room button -->
     <button class="new-room-button" ng-click="home.newRoom()">New room</button>
 
 <!-- cp2 pt 2 -->
     <div class="rooms-container" ng-repeat="room in home.rooms">
+    <!-- make room text selectable,  set the active room -->
+<!-- ****tried using /p but not clickable -->
+      <button class= "room-name" ng-click="home.setActiveRoom(room)">
       {{ room.$value }}
-      &nbsp &nbsp
-      {{ room }}
+    </button>
+      <!-- &nbsp &nbsp
+      <small> {{ room }} </small> -->
     </div>
+
+</section>
+
+<!-- cp 4  chatroom to view messages -->
+
+<section class="chatroom">
+  <h3> Chatroom:  {{ home.activeRoom.name }} </h3>
+  <div class="messages-container" ng-repeat= "message in home.messages">
+  <!-- <div class="messages-container" ng-style=" {color: {{ message.color }} }" ng-repeat= "message in home.messages"> -->
+    <p style= "color:{{message.color}}">
+
+      {{ message.username }}: {{ message.content }} &nbsp &nbsp {{message.sentAt}}
+    </p>
+  </div>
 
 </section>
