@@ -9,12 +9,11 @@
 <!-- cp2 pt 2 -->
     <div class="rooms-container" ng-repeat="room in home.rooms">
     <!-- make room text selectable,  set the active room -->
-<!-- ****tried using /p but not clickable -->
-      <button class= "room-name" ng-click="home.setActiveRoom(room)">
+
+      <button class= "room-name" ng-click="home.setActiveRoom(room.$id)">
       {{ room.$value }}
     </button>
-      <!-- &nbsp &nbsp
-      <small> {{ room }} </small> -->
+      <!-- &nbsp &nbsp <small> {{ room }} </small> -->
     </div>
 
 </section>
@@ -22,12 +21,16 @@
 <!-- cp 4  chatroom to view messages -->
 
 <section class="chatroom">
-  <h3> Chatroom:  {{ home.activeRoom.name }} </h3>
+  <h3> Chatroom:  {{ home.activeRoom.name }}</h3>
+  <!-- <h4> Chatroom: i {{ home.activeRoom.$value }} </h4>
+  <h4> Chatroom: ii {{ room.activeRoom.$value }} </h4>
+  <h4> Chatroom: iii {{ activeRoom.name }} </h4> -->
   <div class="messages-container" ng-repeat= "message in home.messages">
   <!-- <div class="messages-container" ng-style=" {color: {{ message.color }} }" ng-repeat= "message in home.messages"> -->
     <p style= "color:{{message.color}}">
 
-      {{ message.username }}: {{ message.content }} &nbsp &nbsp {{message.sentAt}}
+      {{ message.username }}: {{ message.content }} &emsp; &emsp;
+      <span class="date-stamp"> {{message.sentAt}} </span>
     </p>
   </div>
 

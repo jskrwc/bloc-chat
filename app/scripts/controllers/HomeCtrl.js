@@ -12,12 +12,13 @@
       }
 
       // cp 4 - setting active room
-      // this.setActiveRoom = function(room) {
-      //   this.activeRoom = room;
-      //   this.messages= Message.getByRoomId(room)
-      //
-      // }
-      this.messages= Message.getByRoomId(-1)  //use -1 to be invalid
+      this.setActiveRoom = function(room) {
+        this.activeRoom = room;
+        this.messages= Message.getByRoomId(room)
+
+      }
+
+      // this.messages= Message.getByRoomId(-1)  //use -1 to be invalid
 }
     angular
         .module('blocChat')

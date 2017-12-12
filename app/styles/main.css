@@ -4,22 +4,39 @@
   background-color: lightblue;
   padding-left: 5px;
   /*padding: 10px, 10px, 50px, 10px;*/
-  margin: 10px;
+  margin: 10px 0px;
   float:left;
   width: 300px;
   height: 900px;
 }
 .new-room-button {
   /*.btn-default {*/
+  cursor:pointer;
   color: green;
   background-color: orange;
   border-color: green;
+  width: 80px;
+}
+
+.new-room-button:hover {
+  background-color: green;
+  color: orange;
 }
 
 .rooms-container {
-  /*border: 1px solid yellow;*/
+  /*border: 1px solid black;*/
   padding-top: 10px;
   padding-left: 5px;
+}
+
+.room-name {
+  cursor:pointer;
+  background-color: white;
+  width: 120px;
+}
+
+.room-name:hover {
+  background-color: lightgray;
 }
 
 /*Chatroom -- room including messages */
@@ -27,9 +44,10 @@
   border: 1px solid black;
   display: inline-block;
   background-color: lightgray;
-  padding-left: 5px;
+  padding-left: 0px;
   /*padding: 10px, 10px, 50px, 10px;*/
   margin-top: 10px;
+  margin-left: 0px;
   float:left;
   width: 60%;
   height: 900px;
@@ -38,7 +56,14 @@
 .messages-container {
   border: 1px solid black;
   background-color: yellow;
-  align-content: space-between;
+  /*justify-content: space-between;*/
+  padding-left: 10px;
+  border-radius: 7px;
+}
+
+.date-stamp {
+  /*text-align: right;*/
+  font-size: small;
 }
 
 /*modal */
@@ -46,7 +71,7 @@
 .modal {
   /*position: relative;*/
   width: 300px;
-
+  background-color: lightgreen;
   top: 0;
   right: 0;
   bottom: 0;
@@ -54,41 +79,46 @@
   z-index: 1050;
   /*display: none;*/
   overflow: hidden;
-  /*-webkit-overflow-scrolling: touch;*/
+  -webkit-overflow-scrolling: touch;
   outline: 20;
-
-.modal-header {
+}
+/*.modal-header {
   padding: 2px;
   border-bottom: 1px solid yellow;
-}
+}*/
+
 .modal-header .close {
   margin-top: -2px;
 }
-/*.modal-title {
+
+.modal-title {
   margin: 0;
-  line-height: 1.42857143;*/
+  line-height: 1.42857143;
 }
+
 .modal-body {
   position: relative;
   padding: 15px;
 }
+
+.modal-body input[type="text"] {
+    width: 130px;
+}
+
 .modal-footer {
   padding: 15px;
   text-align: right;
   border-top: 1px solid #e5e5e5;
 }
-.modal-footer .btn + .btn {
-  margin-bottom: 0;
-  margin-left: 5px;
 
-.btn-warning {
-  color: #fff;
-  background-color: #f0ad4e;
-  border-color: #eea236;
+.modal-footer-btn {
+  cursor:pointer;
+  height: 20px;
+  background-color: #white;
+  /*border-color: #eea236;*/
+  border-color: green;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
+.modal-footer-btn:hover {
+  background-color: lightgray;
 }

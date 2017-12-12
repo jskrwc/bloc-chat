@@ -13,15 +13,14 @@
 // get messages by roomID:
 // pass argument into getByRoomId method that contains roomID associated w rooms message
 // firebase equalTo() to find all messages with roomID property equal to the roomId in the argument.
-
-// 8888
     Message.getByRoomId = function(roomId) {
     //   // **** need  message roomID = to roomID in function argument
-    //   return $firebaseArray(ref.orderByChild('roomId').equalTo('roomId'));
+//888
+      return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
 
-      return messages;
+// 888
+      // return messages;
     };
-// console.log(Message);
     return Message;
   }
 
