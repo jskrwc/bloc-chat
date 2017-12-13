@@ -1,4 +1,4 @@
-//Modal controller
+//Modal controller $uibModalInstance -- controls new room modal
 //cp 3
 
 (function() {

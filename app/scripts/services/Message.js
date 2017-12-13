@@ -15,11 +15,7 @@
 // firebase equalTo() to find all messages with roomID property equal to the roomId in the argument.
     Message.getByRoomId = function(roomId) {
     //   // **** need  message roomID = to roomID in function argument
-//888
       return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
-
-// 888
-      // return messages;
     };
     return Message;
   }
