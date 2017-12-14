@@ -10,7 +10,7 @@
     <div class="rooms-container" ng-repeat="room in home.rooms">
     <!-- make room text selectable,  set the active room -->
 
-      <button class= "room-name" ng-click="home.setActiveRoom(room.$id)">
+      <button class= "room-name" ng-click="home.setActiveRoom(room)">
       {{ room.$value }}
     </button>
       <!-- &nbsp &nbsp <small> {{ room }} </small> -->
@@ -21,10 +21,8 @@
 <!-- cp 4  chatroom to view messages -->
 
 <section class="chatroom">
-  <h3> Chatroom:  {{ home.activeRoom.name }}</h3>
-  <!-- <h4> Chatroom: i {{ home.activeRoom.$value }} </h4>
-  <h4> Chatroom: ii {{ room.activeRoom.$value }} </h4>
-  <h4> Chatroom: iii {{ activeRoom.name }} </h4> -->
+  <h3> Chatroom:  {{ home.activeRoom }}</h3>
+
   <div class="messages-container" ng-repeat= "message in home.messages">
   <!-- <div class="messages-container" ng-style=" {color: {{ message.color }} }" ng-repeat= "message in home.messages"> -->
     <p style= "color:{{message.color}}">

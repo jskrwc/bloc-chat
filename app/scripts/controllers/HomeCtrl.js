@@ -3,6 +3,8 @@
 //cp2 part 2
       this.rooms = Room.all;
 
+      this.activeRoom='default room';
+
       this.newRoom = function() {
         $uibModal.open({
             animation: this.animationsEnabled,
@@ -13,8 +15,8 @@
 
       // cp 4 - setting active room
       this.setActiveRoom = function(room) {
-        this.activeRoom = room;
-        this.messages= Message.getByRoomId(room)
+        this.activeRoom = room.$value;
+        this.messages= Message.getByRoomId(room.$id)
 
       }
 

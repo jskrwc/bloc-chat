@@ -6,9 +6,13 @@
     if (!currentUser || currentUser === '') {
       $uibModal.open({
         // Modal configuration object properties
-      })
+        animation: this.animationsEnabled,
+        templateUrl: '/templates/username-modal.html',
+        controller: 'UsernameModalCtrl as modal'
+      });
     }
   }
+
 
   angular
     .module('blocChat')

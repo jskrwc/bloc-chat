@@ -1,1 +1,21 @@
-//cp 5
+<!-- cp 5 -->
+<!-- template for create modal popup to enter username if not in cookie -->
+<div class="modal">
+        <div class="modal-header">
+            <h3>Set a username</h3>
+        </div>
+        <form>
+          <div class="modal-body">
+            <label>This name will appear when you send messages</label>
+            <input type="text" ng-model="modal.username">
+
+          </div>
+          <div class="modal-footer">
+              <!-- no cancel option -->
+              <!-- <button class="modal-footer-btn" ng-click="modal.cancel()">Cancel</button> -->
+              <button class="modal-footer-btn" ng-click="modal.submit()">Enter username</button>
+          </div>
+        </form>
+
+    <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+</div>
