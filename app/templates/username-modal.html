@@ -6,12 +6,12 @@
         </div>
         <form>
           <div class="modal-body">
-            <label>This name will appear when you send messages</label>
-            <input type="text" ng-model="modal.username">
-
+            <label>This name will appear when you send messages  </label>
+            <input type="text" ng-model="modal.username" placeholder="(3+ characters)" required>
           </div>
+
           <div class="modal-footer">
-              <!-- no cancel option -->
+              <!-- nb:  no cancel option -->
               <!-- <button class="modal-footer-btn" ng-click="modal.cancel()">Cancel</button> -->
               <button class="modal-footer-btn" ng-click="modal.submit()">Enter username</button>
           </div>

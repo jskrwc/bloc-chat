@@ -9,8 +9,8 @@
   width: 300px;
   height: 900px;
 }
+
 .new-room-button {
-  /*.btn-default {*/
   cursor:pointer;
   color: green;
   background-color: orange;
@@ -19,6 +19,19 @@
 }
 
 .new-room-button:hover {
+  background-color: green;
+  color: orange;
+}
+
+.submit-message-button {
+  cursor:pointer;
+  color: green;
+  background-color: orange;
+  border-color: green;
+  width: 80px;
+}
+
+.submit-message-button:hover {
   background-color: green;
   color: orange;
 }
@@ -56,14 +69,32 @@
 .messages-container {
   border: 1px solid black;
   background-color: yellow;
-  /*justify-content: space-between;*/
   padding-left: 10px;
   border-radius: 7px;
 }
 
+.new-message-container {
+  border: 1px solid black;
+  background-color: lightgreen;
+  /*justify-content: space-between;*/
+  padding-left: 10px;
+  border-radius: 7px;
+  /* ***no    display: inline; */
+}
+/*
+*** */
+.new-message-container input[type="textarea"] {
+  width: 470px;
+  background-color: lightgreen;
+  border: none;
+}
+
 .date-stamp {
-  /*text-align: right;*/
-  font-size: small;
+  float: right;
+  font-size: 60%;
+  font-style: italic;
+  margin-top:20px;
+	/* border: solid 1px black; */
 }
 
 /*modal */
@@ -102,7 +133,7 @@
 }
 
 .modal-body input[type="text"] {
-    width: 130px;
+    width: 170px;
 }
 
 .modal-footer {

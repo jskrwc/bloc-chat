@@ -9,11 +9,12 @@
       // };
 
       this.submit = function() {
-        //user.add(this.username); //????  add to $cookies
 
         $cookies.put('blocChatCurrentUser', this.username);
-
-        $uibModalInstance.close('submitted');
+//make sure acceptable username - 3 or more characters
+        if (this.username.length >2) {
+          $uibModalInstance.close('submitted');
+        }
       };
     }
 

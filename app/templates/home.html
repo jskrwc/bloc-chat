@@ -24,11 +24,21 @@
   <h3> Chatroom:  {{ home.activeRoom }}</h3>
 
   <div class="messages-container" ng-repeat= "message in home.messages">
-  <!-- <div class="messages-container" ng-style=" {color: {{ message.color }} }" ng-repeat= "message in home.messages"> -->
-    <p style= "color:{{message.color}}">
 
+    <p style= "color:{{message.color}}">
       {{ message.username }}: {{ message.content }} &emsp; &emsp;
+<!-- ***how right tab/justify date? -->
       <span class="date-stamp"> {{message.sentAt}} </span>
+    </p>
+  </div>
+
+  <div class="new-message-container">
+    <p style= "color:{{message.color}}">
+    {{ home.currentUser }}
+    <form name="submitMessageForm">
+      <input type="textarea"  ng-model="home.content" placeholder="enter your message..." required>
+      <button class= "submit-message-button" ng-click= "home.newMessage()">Submit</button>
+
     </p>
   </div>
 
